@@ -30,5 +30,9 @@ def count_param(parameter):
 def math_route_add(num1, num2):
     return str(num1 + num2)
 
+@app.route('/math/<int:num1>/-/<int:num2>')
+def math_route_subtract(num1, num2):
+    return str(num1 - num2)
+
 
 # http://127.0.0.1:5555/math/5/+/5
