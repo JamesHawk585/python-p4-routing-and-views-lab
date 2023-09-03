@@ -20,7 +20,11 @@ def print_text_in_console():
     print('hello')
     return 'hello' 
 
-@app.route('/count/<parameter>')
+@app.route('/count/<int:parameter>')
 def count_param(parameter):
-    return parameter
+    # Generator expression 
+    # it generates a sequence of numbers starting from 0 and ending at parameter - 1.
+    return '\n'.join(str(i) for i in range(parameter)) + '\n'
+    
 
+# http://127.0.0.1:5555/count/10
