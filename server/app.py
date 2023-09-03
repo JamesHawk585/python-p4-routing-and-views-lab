@@ -28,11 +28,18 @@ def count_param(parameter):
     
 @app.route('/math/<int:num1>/+/<int:num2>')
 def math_route_add(num1, num2):
+    # Flask view functions can only return a string, tuple, or a Flask Response Object. 
     return str(num1 + num2)
 
 @app.route('/math/<int:num1>/-/<int:num2>')
 def math_route_subtract(num1, num2):
     return str(num1 - num2)
+
+@app.route('/math/<int:num1>/div/<int:num2>')
+def math_route_divide(num1, num2):
+    return str(num1 / num2)
+
+
 
 
 # http://127.0.0.1:5555/math/5/+/5
