@@ -26,5 +26,9 @@ def count_param(parameter):
     # it generates a sequence of numbers starting from 0 and ending at parameter - 1.
     return '\n'.join(str(i) for i in range(parameter)) + '\n'
     
+@app.route('/math/<int:num1>/+/<int:num2>')
+def math_route_add(num1, num2):
+    return str(num1 + num2)
 
-# http://127.0.0.1:5555/count/10
+
+# http://127.0.0.1:5555/math/5/+/5
