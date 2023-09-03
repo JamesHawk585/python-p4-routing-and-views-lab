@@ -39,6 +39,13 @@ def math_route_subtract(num1, num2):
 def math_route_divide(num1, num2):
     return str(num1 / num2)
 
+@app.route('/math/<int:num1>/*/<int:num2>')
+def math_route_multiply(num1, num2):
+    return str(num1 * num2)
+
+@app.route('/math/<int:num1>/%/<int:num2>')
+def math_route_modulo(num1, num2):
+    return str(num1 % num2)
 
 
 
